@@ -37,7 +37,7 @@
             <td><a th:href="@{/board/boards/{seq}(seq=${post.seq})}" th:text="${post.title}">게시글 제목</a></td>
             <td th:text="${post.contents}">게시글 내용</td>
             <td th:text="${post.regUser}">등록자</td>
-            <td>2024-01-01 12:00</td>
+            <td th:text="${post.regDate}">등록일자</td>
         </tr>
         </tbody>
     </table>
