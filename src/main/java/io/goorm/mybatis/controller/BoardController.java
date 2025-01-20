@@ -52,12 +52,12 @@ public class BoardController {
         return "/edit"; // edit.html로 전달
     }
 
-//    @PostMapping("/update")
-//    public String updateBoard(@ModelAttribute Board board, Model model) {
-//        boardService.updateBoard(board);
-//        model.addAttribute("updatePost(1)",board);
-//        return "redirect:/board/boards";
-//    }
+    @PostMapping("/api/boards/{seq}")
+    public String updateBoard(@PathVariable Long seq, @ModelAttribute Board board) {
+        boardService.updateBoard(board);
+        return "/list";
+    }
+
 
 
     /* 등록 */

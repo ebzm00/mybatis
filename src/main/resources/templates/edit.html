@@ -35,7 +35,7 @@
         <span th:text="${post.regUser}">사용자</span>
         <br><br>
         <div class="button-container">
-        <button type="button" onclick="updatePost(1)">수정</button>
+        <button type="submit" onclick="updatePost(1)">수정</button>
         <button type="button" th:onclick="|location.href='@{/board/boards}'|">리스트</button>
         </div>
     </form>
